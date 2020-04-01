@@ -1,5 +1,7 @@
 package oldProject;
 
+import annotations.ProdCode;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -29,6 +31,7 @@ public class Main {
         }
     }
 
+    @ProdCode
     private static String getClassInformation(Class myClass){
         StringBuilder information = new StringBuilder("");
         information.append("Class name: " + myClass.getName()+ "\n");

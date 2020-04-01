@@ -1,7 +1,12 @@
 package oldProject;
 
+import annotations.ThisCodeSmells;
+import annotations.UseStackOnly;
+
 public class Ellipse extends Figure implements Circumference{
+    @UseStackOnly
     private int radius1;
+    @ThisCodeSmells(reviewer = "Slava")
     private int radius2;
 
     public Ellipse(int radius1, int radius2){
@@ -9,6 +14,7 @@ public class Ellipse extends Figure implements Circumference{
         this.radius2 = radius2;
     }
 
+    @ThisCodeSmells(reviewer = "Petya")
     @Override
     public int findArea() {
         return (int)Math.round(Math.PI * radius1 * radius2);
